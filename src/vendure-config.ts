@@ -17,16 +17,13 @@ export const config: VendureConfig = {
         port: +(process.env.PORT || 3000),
         adminApiPath: 'admin-api',
         shopApiPath: 'shop-api',
+          cors: {
+    origin: true,
+    credentials: true,
         
         // The following options are useful in development mode,
         // but are best turned off for production for security
         // reasons.
-        apiOptions: {
-  cors: {
-    origin: true,
-    credentials: true,
-  },
-},
         ...(IS_DEV ? {
             adminApiPlayground: {
                 settings: { 'request.credentials': 'include' } as any,
