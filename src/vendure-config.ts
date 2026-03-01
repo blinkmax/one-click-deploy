@@ -26,7 +26,7 @@ export const config: VendureConfig = {
     origin: true,
     credentials: true,
   },
-}
+},
         ...(IS_DEV ? {
             adminApiPlayground: {
                 settings: { 'request.credentials': 'include' } as any,
